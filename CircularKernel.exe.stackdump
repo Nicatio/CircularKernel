@@ -1,0 +1,9 @@
+Exception: STATUS_ACCESS_VIOLATION at eip=0040190E
+eax=FFFA0000 ebx=000000E2 ecx=0000006D edx=00000000 esi=000000E2 edi=000000E2
+ebp=0028AC08 esp=0028AA10 program=C:\cygwin\home\HDSP\CircularKernel\Debug\CircularKernel.exe, pid 5652, thread main
+cs=0023 ds=002B es=002B fs=0053 gs=002B ss=002B
+Stack trace:
+Frame     Function  Args
+0028AC08  0040190E  (0000002F, 00000000, 61273678, 6100763A)
+0028ACF8  6100763A  (00000000, 0028CD78, 61006C50, 00000000)
+End of stack trace
