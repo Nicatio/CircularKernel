@@ -176,8 +176,8 @@ void BMPout (
 }
 
 int main() {
-	int w = 500;
-	int h = 500;
+	int w = 2500;
+	int h = 2500;
 	int sz = w*h;
 	unsigned char *image = new unsigned char[sz*3];
 	unsigned char *ptrImage;
@@ -185,7 +185,7 @@ int main() {
 	int wCenter = w>>1;
 	int hCenter = h>>1;
 
-	double outerRadius = 200.0000000;
+	double outerRadius = 1100.0000000;
 	double outerRadiusSquare = outerRadius*outerRadius;
 	double innerRadius = outerRadius/sqrt(2.0);
 	double innerRadiusSquare = innerRadius*innerRadius;
@@ -199,8 +199,8 @@ int main() {
 				double rad = (sin((atan2(((double)(hCenter-j)),((wCenter-i)+0.000000000001))*(mul)))+1)*120;
 				hsv a,a2;
 				rgb b,b2;
-				a.h = rad; 				a.s = 0.88;				a.v = 0.62;
-				a2.h = 240-rad;			a2.s = 0.88;			a2.v = 0.62;
+				a.h = rad; 				a.s = 1;				a.v = 1;
+				a2.h = 240-rad;			a2.s = 1;			a2.v = 1;
 				b = hsv2rgb(a);
 				b2 = hsv2rgb(a2);
 				if (temp<innerRadiusSquare){
@@ -220,7 +220,7 @@ int main() {
 		}
 
 		stringstream abc;
-		abc<<"img"<<muls<<".bmp";
+		abc<<"./image/img"<<muls<<".bmp";
 		BMPout(image,abc.str().c_str(),w,h);
 		cout<<abc.str()<<" is processed."<<endl;
 	}
