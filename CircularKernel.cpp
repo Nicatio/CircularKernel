@@ -223,6 +223,7 @@ int main() {
 		abc<<"./image/img"<<muls<<".bmp";
 		BMPout(image,abc.str().c_str(),w,h);
 		cout<<abc.str()<<" is processed."<<endl;
+
 	}
 }
 
